@@ -10,7 +10,7 @@ os.path.dirname
 os.path.getsize
 """
 
-directory = r'C:\Users\HP\PycharmProjects\pythonProject7\second'
+directory = '.'   
 for root, dirs, files in os.walk(directory):
 
     for file in files:
