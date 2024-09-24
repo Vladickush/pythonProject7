@@ -10,12 +10,17 @@ os.path.dirname
 os.path.getsize
 """
 
-directory = '.'
+directory = r'C:\Users\HP\PycharmProjects\pythonProject7\second'
 for root, dirs, files in os.walk(directory):
     for file in files:
-        filepath = os.path.join
-        filetime = os.path.getmtime
-        formatted_time = time.strftime("%d.%m.%Y %H:%M", time.localtime(1))
-        filesize = os.path.getsize
-        parent_dir = os.path.dirname
-print(f'Обнаружен файл: {file}, Путь: {filepath}, Размер: {filesize} байт, Время изменения: {formatted_time}, Родительская директория: {parent_dir}')
+        filepath = os.path.join(directory)
+        filetime = os.path.getmtime(file)
+        formatted_time = time.strftime("%d.%m.%Y %H:%M", time.localtime())
+        filesize = os.path.getsize(file)
+        parent_dir = os.path.dirname(root)
+
+        print(f'Обнаружен файл: {file}')
+        print(f'Путь: {filepath}')
+        print(f'Время изменения: {formatted_time}, ')
+        print(f'Размер: {filesize} байт, ')
+        print(f'Родительская директория: {parent_dir}')
